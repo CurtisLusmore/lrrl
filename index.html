@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LRRL</title>
+  <script src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<section id="play">
+  <h1>LRRL</h1>
+  <button onclick="help();">Help</button>
+  <br />
+  <button onclick="play();">Play</button>
+</section>
+<section id="help" style="display: none;">
+  <h1>LRRL</h1>
+  <p>Left right right left.</p>
+  <p>Oh one one oh.</p>
+  <p>Boop beep beep boop.</p>
+  <p>This sequence goes by many names.</p>
+  <p>One such name is the <a href="https://en.wikipedia.org/wiki/Thue%E2%80%93Morse_sequence">Thue-Morse Sequence</a>.</p>
+  <p>There are two items, left and right. Oh and one. Boop and beep.</p>
+  <p>It starts with a left. Or an oh, or a boop.</p>
+  <p>The sequence grows by repeating itself inverted.</p>
+  <p>Lefts become rights, ohs become ones, boops become beeps.</p>
+  <p>L</p>
+  <p>R</p>
+  <p>R L</p>
+  <p>R L L R</p>
+  <p>R L L R, L R R L</p>
+  <p>There's a beautiful, infinite nesting at play here.</p>
+  <p>
+    The first sixteen items in the sequence are
+    <br />
+    L R R L, R L L R, R L L R, L R R L
+  </p>
+  <p>Let's invent some further notation to shorten the sequence.</p>
+  <p>Let's say that L2 is the sequence L R R L, and R2 is R L L R.</p>
+  <p>The first sixteen items are L2 R2 R2 L2.</p>
+  <p>Let's say that L3 is the sequence L2 R2 R2 L2, and R3 is R2 L2 L2 R2.</p>
+  <p>The first sixty-four items are L3 R3 R3 L3.</p>
+  <p>And it just keeps nesting like this.</p>
+  <p>So how far do you think you can make it through the sequence without messing up?</p>
+  <p>Press Play below to try for yourself.</p>
+  <p>
+    You can use <kbd>&lt;</kbd> and <kbd>&gt;</kbd>,
+    <br />
+    or tap the left or right half of your screen to play.
+  </p>
+  <button onclick="play();">Play</button>
+</section>
+<section id="game" style="display: none;">
+  <canvas id="gameboard"></canvas>
+</section>
+<section id="over" style="display: none;">
+  <h1>LRRL</h1>
+  <p>Your score: <span id="current-score"></span></p>
+  <p>Highscore: <span id="highscore"></span></p>
+  <button onclick="help();">Help</button>
+  <br />
+  <button onclick="play();">Play</button>
+</section>
+</body>
+
+</html>
